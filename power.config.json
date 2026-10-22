@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "appId": null,
+  "appDisplayName": "caze",
+  "region": "prod",
+  "appType": "CodeApp",
+  "environmentId": "640edcea-61b1-e8d1-9ddd-1fa816dc1a11",
+  "description": " ",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {
+    "e42fc108-9bbb-4103-aa29-ac5ddfa331fb": {
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "displayName": "Office 365 Outlook"
+    },
+    "5413beee-adce-4d6b-896e-8a2776af3876": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+      "displayName": "Logic flows",
+      "dataSources": [
+        "flw_notificarnovochamado"
+      ],
+      "workflowDetails": {
+        "workflowEntityId": "e505bad0-85c9-f111-aaaf-70a8a59a485c",
+        "workflowDisplayName": "FLW_NotificarNovoChamado",
+        "workflowName": "bcac871b-ab90-db9e-ecf6-06f37ffb9403",
+        "dependencies": {
+          "shared_office365": "e42fc108-9bbb-4103-aa29-ac5ddfa331fb"
+        }
+      }
+    },
+    "43506d7d-6a3e-4581-b1cc-ad3ed3af9e7d": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+      "displayName": "SharePoint",
+      "dataSources": [
+        "baseconhecimento"
+      ],
+      "dataSets": {
+        "https://devgbsn.sharepoint.com": {
+          "dataSources": {
+            "baseconhecimento": {
+              "tableName": "4ff14333-ea34-405e-aae1-a3350976d547"
+            }
+          }
+        }
+      }
+    }
+  },
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "cr2cd_chamados": {
+          "entitySetName": "cr2cd_chamados",
+          "logicalName": "cr2cd_chamado",
+          "isHidden": false
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}
